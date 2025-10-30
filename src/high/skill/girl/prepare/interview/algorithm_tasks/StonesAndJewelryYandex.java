@@ -1,4 +1,4 @@
-package high.skill.girl.practice.interview_tasks.main.algoritms;
+package high.skill.girl.prepare.interview.algorithm_tasks;
 
 /*
 Даны две строки строчных латинских символов: строка J и строка S.
