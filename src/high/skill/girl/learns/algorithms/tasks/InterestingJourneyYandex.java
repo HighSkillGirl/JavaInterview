@@ -1,4 +1,4 @@
-package high.skill.girl.prepare.interview.algorithms.tasks;
+package high.skill.girl.learns.algorithms.tasks;
 
 /*
 В первой строке входных данных записано количество городов.

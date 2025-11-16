@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaInterview.iml" filepath="$PROJECT_DIR$/JavaInterview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AlgorithmsAndDataStructure.iml" filepath="$PROJECT_DIR$/AlgorithmsAndDataStructure.iml" />
     </modules>
   </component>
 </project>

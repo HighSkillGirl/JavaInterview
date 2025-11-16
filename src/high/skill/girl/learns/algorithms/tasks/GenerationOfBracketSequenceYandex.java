@@ -1,4 +1,4 @@
-package high.skill.girl.prepare.interview.algorithms.tasks;
+package high.skill.girl.learns.algorithms.tasks;
 
 /*
 Единственная строка входного файла содержит целое число n, 0≤n≤11. В задаче используются только круглые скобки.
