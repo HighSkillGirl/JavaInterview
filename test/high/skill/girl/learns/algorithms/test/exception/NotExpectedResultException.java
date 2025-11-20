@@ -3,10 +3,10 @@ package high.skill.girl.learns.algorithms.test.exception;
 public class NotExpectedResultException extends RuntimeException {
 
     private final String algoName;
-    private final int actual;
-    private final int expected;
+    private final String actual;
+    private final String expected;
 
-    public NotExpectedResultException(String algoName, int actual, int expected) {
+    public NotExpectedResultException(String algoName, String actual, String expected) {
         this.algoName = algoName;
         this.actual = actual;
         this.expected = expected;
@@ -14,6 +14,6 @@ public class NotExpectedResultException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return String.format("Получен неожидаемый результат тестирования алгоритма %s: actual = %d, expected = %d", algoName, actual, expected);
+        return String.format("Получен неожидаемый результат тестирования алгоритма %s: actual = %s, expected = %s", algoName, actual, expected);
     }
 }

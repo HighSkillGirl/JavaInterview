@@ -1,11 +1,12 @@
 package high.skill.girl.learns.algorithms.test.tasks;
 
 import high.skill.girl.learns.algorithms.tasks.StonesAndJewelryYandex;
-import high.skill.girl.learns.algorithms.test.exception.NotExpectedResultException;
 
 import java.io.*;
 
-public class StonesAndJewelryYandexTest {
+public class StonesAndJewelryYandexTest implements Testable<StonesAndJewelryYandexTest.TestCaseModel> {
+
+    public record TestCaseModel (String jewelry, String stones, int expectedResult) { }
 
     private static final TestCaseModel[] testCases = new TestCaseModel[]
             {
@@ -18,44 +19,36 @@ public class StonesAndJewelryYandexTest {
             };
 
     public static void main(String[] args) throws IOException {
-
-        InputStream originalIn = System.in;
-        PrintStream originalOut = System.out;
-
-        try {
-            for (TestCaseModel testCase : testCases) {
-                String testInput = testCase.comparedString[0] + "\n" + testCase.comparedString[1] + "\n";
-                ByteArrayInputStream testIn = new ByteArrayInputStream(testInput.getBytes());
-                System.setIn(testIn);
-
-                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-                PrintStream testOut = new PrintStream(outputStream);
-                System.setOut(testOut);
-
-                StonesAndJewelryYandex.main(new String[]{});
-                String output = outputStream.toString().trim();
-                int actual = Integer.parseInt(output);
-
-                System.setIn(originalIn);
-                System.setOut(originalOut);
-
-                if (actual != testCase.expectedResult) {
-                    throw new NotExpectedResultException(StonesAndJewelryYandex.class.getSimpleName(), actual, testCase.expectedResult);
-                }
-            }
-        } catch (NotExpectedResultException e) {
-            System.out.println(e.getMessage());
-        }
-
+        new StonesAndJewelryYandexTest().test();
     }
 
-    private static class TestCaseModel {
-        String[] comparedString;
-        int expectedResult;
+    @Override
+    public TestCaseModel[] getTestCases() {
+        return testCases;
+    }
 
-        public TestCaseModel(String jewelry, String stones, int expectedResult) {
-            this.comparedString = new String[]{jewelry, stones};
-            this.expectedResult = expectedResult;
-        }
+    @Override
+    public String getTestInput(TestCaseModel testCase) {
+        return testCase.jewelry + "\n" + testCase.stones + "\n";
+    }
+
+    @Override
+    public void testAlgorithm() throws IOException {
+        StonesAndJewelryYandex.main(new String[]{});
+    }
+
+    @Override
+    public String getExpectedResult(TestCaseModel testCase) {
+        return String.valueOf(testCase.expectedResult);
+    }
+
+    @Override
+    public boolean isResultCorrect(String actual, String expected) {
+        return Integer.parseInt(actual) == Integer.parseInt(expected);
+    }
+
+    @Override
+    public String getSimpleClassName() {
+        return StonesAndJewelryYandex.class.getSimpleName();
     }
 }
