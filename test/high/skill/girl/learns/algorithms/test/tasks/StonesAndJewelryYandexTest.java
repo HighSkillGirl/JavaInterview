@@ -48,11 +48,6 @@ public class StonesAndJewelryYandexTest implements Testable<StonesAndJewelryYand
     }
 
     @Override
-    public boolean isResultCorrect(String actual, String expected) {
-        return Integer.parseInt(actual) == Integer.parseInt(expected);
-    }
-
-    @Override
     public String getSimpleClassName() {
         return StonesAndJewelryYandex.class.getSimpleName();
     }

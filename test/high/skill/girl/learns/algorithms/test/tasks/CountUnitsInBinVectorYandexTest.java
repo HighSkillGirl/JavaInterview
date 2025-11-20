@@ -52,11 +52,6 @@ public class CountUnitsInBinVectorYandexTest implements Testable<CountUnitsInBin
     }
 
     @Override
-    public boolean isResultCorrect(String actual, String expected) {
-        return Integer.parseInt(actual) == Integer.parseInt(expected);
-    }
-
-    @Override
     public String getSimpleClassName() {
         return CountUnitsInBinVectorYandex.class.getSimpleName();
     }

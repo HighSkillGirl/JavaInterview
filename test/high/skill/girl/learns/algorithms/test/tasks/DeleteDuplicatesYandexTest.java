@@ -42,11 +42,6 @@ public class DeleteDuplicatesYandexTest implements Testable<DeleteDuplicatesYand
     }
 
     @Override
-    public boolean isResultCorrect(String actual, String expected) {
-        return actual.equals(expected);
-    }
-
-    @Override
     public String getSimpleClassName() {
         return DeleteDuplicatesYandex.class.getSimpleName();
     }

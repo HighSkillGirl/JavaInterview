@@ -44,11 +44,6 @@ public class GenerationOfBracketSequenceYandexTest implements Testable<Generatio
     }
 
     @Override
-    public boolean isResultCorrect(String actual, String expected) {
-        return actual.equals(expected);
-    }
-
-    @Override
     public String getSimpleClassName() {
         return GenerationOfBracketSequenceYandex.class.getSimpleName();
     }

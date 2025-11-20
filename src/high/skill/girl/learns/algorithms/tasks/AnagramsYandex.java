@@ -8,11 +8,6 @@ package high.skill.girl.learns.algorithms.tasks;
 Выходной файл должен содержать единицу, если строки являются анаграммами, и ноль в противном случае.
 
 Нюансы: ограничение по памяти
-
-Тест-кейсы:
-qiu  1    zprl  0    aabb  0
-iuq       zprc       abca
-разная длина - 0
  */
 
 import java.io.BufferedReader;

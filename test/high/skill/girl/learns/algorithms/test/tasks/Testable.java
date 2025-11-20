@@ -42,6 +42,9 @@ public interface Testable<T> {
     void testAlgorithm() throws IOException;
     String cleanOutput(String output);
     String getExpectedResult(T t);
-    boolean isResultCorrect(String actual, String expected);
     String getSimpleClassName();
+
+    default boolean isResultCorrect(String actual, String expected) {
+        return actual.equals(expected);
+    }
 }
