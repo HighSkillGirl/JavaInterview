@@ -1,6 +1,7 @@
-package high.skill.girl.learns.algorithms.test.tasks;
+package high.skill.girl.learns.algorithms.test.tasks.impl;
 
 import high.skill.girl.learns.algorithms.tasks.StonesAndJewelryYandex;
+import high.skill.girl.learns.algorithms.test.tasks.Testable;
 
 import java.io.*;
 
