@@ -1,7 +1,7 @@
-package high.skill.girl.learns.algorithms.test.tasks.impl;
+package high.skill.girl.learns.algorithms.tasks.impl;
 
 import high.skill.girl.learns.algorithms.tasks.AnagramsYandex;
-import high.skill.girl.learns.algorithms.test.tasks.Testable;
+import high.skill.girl.learns.algorithms.tasks.Testable;
 
 import java.io.IOException;
 
